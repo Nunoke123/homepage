@@ -17,4 +17,9 @@ div {
 
 img {
     width: 128px;
+    transition: 0.5s;
+}
+
+img:hover {
+    filter: drop-shadow(0 0 10px white);
 }
