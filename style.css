@@ -7,23 +7,49 @@ body {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-family: 'Comic Sans MS', 'Comic Sans';
-}
-
-div {
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    text-align: center;
+    font-family: --system-ui, 'Comic Sans MS', 'Comic Sans', cursive;
+    height: 100vh;
+    overflow: hidden;
 }
 
-img {
-    width: 128px;
+main {
+    display: flex;
+    gap: 10px;
+}
+
+section {
+    width: 100px;
+    background-color: green;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
     transition: 0.5s;
 }
 
-img:hover {
-    filter: drop-shadow(0 0 10px white);
+a:hover {
+    color: blue;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+.legacy {
+    position: fixed;
+    bottom: 0px;
+    color: transparent;
+    transition: 0.5s;
+}
+
+.legacy:hover {
+    color: blue;
+    text-decoration: underline;
+    padding-left: 0px;
 }

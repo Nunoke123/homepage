@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="legacy.css">
+</head>
+<body>
+    <h1 id="clock"></h1>
+    <section>
+        <h2>Fun</h2>
+        <div>
+            <a href="https://www.youtube.com"><img src="images/Youtube.webp" alt="Youtube"></a>
+            <a href="https://nunoke123.github.io/musicplayer"><img src="images/music.webp" alt="Music"></a>
+        </div>
+        <h2>School</h2>
+        <div>
+            <a href="https://bazandpoort.smartschool.be"><img src="images/Smartschool.webp" alt="Smartschool"></a>
+            <a href="https://www.meneermaes.be"><img src="images/Meneermaes.webp" alt="Meneermaes"></a>
+            <a href="https://www.github.com"><img src="images/Github.svg" alt="Github"></a>
+        </div>
+        <h2>Useful</h2>
+        <div>
+            <a href="https://gemini.google.com"><img src="images/Gemini.webp" alt="Gemini"></a>
+            <a href="https://www.gmail.com"><img src="images/Gmail.webp" alt="Gmail"></a>
+        </div>
+    </section>
+
+    <a href="index.html" class="legacy">Modern</a>
+
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+
+        startTime();
+    </script>
+</body>
+</html>
